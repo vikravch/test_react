@@ -24,7 +24,7 @@ const getData = ()=>{
         body: raw,
     };
 
-    fetch("https://ecommerce-sport-production.up.railway.app/auth/registration",
+    fetch("https://ecommerce2-sport-production.up.railway.app/auth/registration",
         requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
