@@ -19,12 +19,18 @@ const getData = ()=>{
         "surname": "Surname"
     });
 
+    var myHeaders = new Headers();
+    myHeaders.append("User-Password", "Basic dXNlckBnbWFpbC5jb206UGFzc3dvcmQx");
+    myHeaders.append("Content-Type", "application/json");
+
     const requestOptions = {
         method: 'POST',
+        headers: myHeaders,
         body: raw,
+        redirect: 'follow'
     };
 
-    fetch("https://ecommerce-sport-production.up.railway.app/auth/registration",
+    fetch("https://ecommerce2-sport-production.up.railway.app/auth/registration",
         requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
